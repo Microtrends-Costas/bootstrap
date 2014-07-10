@@ -10,15 +10,19 @@
 .container {
   .container-fixed();
 
-  @media (min-width: @screen-sm-min) {
-    width: @container-sm;
-  }
-  @media (min-width: @screen-md-min) {
-    width: @container-md;
-  }
-  @media (min-width: @screen-lg-min) {
-    width: @container-lg;
-  }
+    @media all and (max-width: 1023px){
+        width: 768px;
+    }
+    
+    @media all and (min-width: 1024px) and (max-width: 1323px) {
+            width: 1024px;
+    }
+    @media all and (min-width: 1324px) and (max-width: 1623px) {
+            width: 1324px;
+    }
+        @media all and  (min-width: 1624px) {
+            width: 1624px;
+    }
 }
 
 

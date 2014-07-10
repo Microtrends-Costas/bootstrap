@@ -1,0 +1,154 @@
+/* FlexTPA Basics */
+
+html{
+    height: 100%;
+}
+
+body{
+    background: url("bg.jpg");
+    height: 100%;
+    overflow: auto;
+}
+
+#container{
+    @media all and (max-width: 1023px){
+        width: 768px;
+    }
+    
+    @media all and (min-width: 1024px) and (max-width: 1323px) {
+            width: 1024px;
+    }
+    @media all and (min-width: 1324px) and (max-width: 1623px) {
+            width: 1324px;
+    }
+        @media all and  (min-width: 1624px) {
+            width: 1624px;
+    }
+    height: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 0;
+    margin-top: 0;
+}
+#content {
+    @media all and (max-width: 1023px){
+        width: 768px;
+    }
+    
+    @media all and (min-width: 1024px) and (max-width: 1323px) {
+            width: 1024px;
+    }
+    @media all and (min-width: 1324px) and (max-width: 1623px) {
+            width: 1324px;
+    }
+        @media all and  (min-width: 1624px) {
+            width: 1624px;
+    }
+height: 100%;
+}
+#sidenav {
+float: left;
+height: 100%;
+width: 160px;
+margin-top: -25px;
+padding-top: 25px;
+background-color: @navbar-default-bg;
+border-color: @navbar-default-border;
+
+}
+
+#inner-content {
+float: right;
+height: 100%;
+    @media all and (max-width: 1023px){
+        width: 608px;
+    }
+    
+    @media all and (min-width: 1024px) and (max-width: 1323px) {
+            width: 864px;
+    }
+    @media all and (min-width: 1324px) and (max-width: 1623px) {
+            width: 1164px;
+    }
+        @media all and  (min-width: 1624px) {
+            width: 1464px;
+    }
+padding: 25px;
+padding-bottom: 60px;
+overflow: auto;
+margin-top: -25px;
+margin-bottom: 60px;
+}
+
+
+#xFooter{
+    position: fixed;
+display: block;
+bottom: 0;
+margin: 0 auto;
+left: 0;
+right: 0;
+    @media all and (max-width: 1023px){
+        width: 768px;
+    }
+    
+    @media all and (min-width: 1024px) and (max-width: 1323px) {
+            width: 1024px;
+    }
+    @media all and (min-width: 1324px) and (max-width: 1623px) {
+            width: 1324px;
+    }
+        @media all and  (min-width: 1624px) {
+            width: 1624px;
+    }
+height: 16px;
+text-align: center;
+/* Adds shadow to the bottom of the bar */
+-webkit-box-shadow: 0px 0px 8px 0px #000000;
+-moz-box-shadow: 0px 0px 8px 0px #000000;
+box-shadow: 0px 0px 8px 0px #000000;
+/* Adds the transparent background */
+background-color: darken(@brand-primary, 10%);
+color: rgba(255, 255, 255, 0.8);
+}
+
+#HeaderTitle{
+    @media all and (max-width: 1023px){
+        width: 208px;
+    }
+    
+    @media all and (min-width: 1024px) and (max-width: 1323px) {
+            width: 464px;
+    }
+    @media all and (min-width: 1324px) and (max-width: 1623px) {
+            width: 664px;
+    }
+        @media all and  (min-width: 1624px) {
+            width: 964px;
+    }
+    text-align:center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#HeaderUser{
+       @media all and (max-width: 1323px) {
+            width: 100px;
+    }
+    @media all and (min-width: 1324px) {
+            width: 200px;
+    }
+    #HeaderLIA{
+               @media all and (max-width: 1323px) {
+            display: none;
+    }
+    }
+    text-align:center;
+}

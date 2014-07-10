@@ -31,9 +31,7 @@
 .navbar-header {
   &:extend(.clearfix all);
 
-  @media (min-width: @grid-float-breakpoint) {
     float: left;
-  }
 }
 
 
@@ -140,6 +138,7 @@
   position: fixed;
   right: 0;
   left: 0;
+  width: 1260px;
   z-index: @zindex-navbar-fixed;
   .translate3d(0, 0, 0);
 

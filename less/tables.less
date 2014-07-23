@@ -110,6 +110,18 @@ th {
   }
 }
 
+.table-striped-search {
+  > tbody > tr:nth-child(4n) {
+    background-color: @table-bg-accent;
+  }
+}
+
+.table-striped-light {
+  > tbody > tr:nth-child(odd) {
+    background-color: lighten(@table-bg-accent, 3%);
+  }
+}
+
 
 // Hover effect
 //

@@ -118,13 +118,20 @@ th {
 
 .table-striped-search {
   > tbody > tr:nth-child(4n) {
-    background-color: @table-bg-accent;
+    background-color: darken(@table-bg-accent, 3%);
   }
+  a{  font-weight: bold; }
 }
 
 .table-striped-light {
   > tbody > tr:nth-child(odd) {
-    background-color: lighten(@table-bg-accent, 3%);
+    background-color: @panel-default-heading-bg; //lighten(@table-bg-accent, 3%);
+  }
+}
+
+.table-striped-dark {
+  > tbody > tr:nth-child(odd) {
+    background-color: darken(@table-bg-accent, 3%);
   }
 }
 

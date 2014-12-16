@@ -304,3 +304,106 @@ hr.separator{
 #sidenav {
     background-position-x: 9px;
 }
+
+
+@panel-plan-text:                #31708f;
+@panel-plan-bg:                  #d9edf7;
+@panel-plan-border:              darken(spin(@panel-class-bg, -10), 7%);
+
+@panel-plan-alt-bg:              darken(@panel-plan-bg, 10%);
+
+.panel-plan{
+    .panel-variant(@panel-plan-border; @panel-plan-text; @panel-plan-bg; @panel-plan-border);
+        .panel-title-bar{
+    font-weight: bold;
+    text-align: right;
+    }
+    .panel-title{
+        text-align: left;
+    }
+    a {
+        color: @panel-plan-text;    
+    }
+}
+
+.panel-plan-alt{
+    .panel-variant(@panel-plan-border; @panel-plan-text; @panel-plan-alt-bg; @panel-plan-border);
+        .panel-title-bar{
+    font-weight: bold;
+    text-align: right;
+    }
+        .panel-title{
+        text-align: left;
+    }
+    a {
+        color: @panel-plan-text;    
+    }
+}
+
+
+@panel-class-text:                @gray-dark;
+@panel-class-bg:                  #f5f5f5;
+@panel-class-border:              #ddd;
+
+@panel-class-alt-bg:              darken(@panel-class-bg, 10%);
+
+.panel-class{
+    .panel-title-bar{
+        font-weight: bold;
+        text-align: right;
+    }
+    a {
+        color: @panel-class-text;    
+    }
+    .panel-variant(@panel-class-border; @panel-class-text; @panel-class-bg; @panel-class-border);
+    
+}
+
+.panel-class-alt{
+    .panel-title-bar{
+    font-weight: bold;
+    text-align: right;
+    }
+        .panel-title{
+        text-align: left;
+    }
+    a {
+        color: @panel-class-text;    
+    }
+    .panel-variant(@panel-class-border; @panel-class-text; @panel-class-alt-bg; @panel-class-border);
+}
+
+@panel-benefit-text:                darken(@panel-plan-text, 15%);
+@panel-benefit-bg:                  darken(@panel-plan-bg, 15%);
+@panel-benefit-border:              darken(spin(@panel-benefit-bg, -10), 7%);
+
+@panel-benefit-alt-bg:                  darken(@panel-benefit-bg, 10%);
+
+.panel-benefit{
+    .panel-variant(@panel-benefit-border; @panel-benefit-text; @panel-benefit-bg; @panel-benefit-border);
+    .panel-title-bar{
+    font-weight: bold;
+    text-align: right;
+    }
+        .panel-title{
+        text-align: left;
+    }
+    a {
+        color: @panel-benefit-text;    
+    }
+    
+}
+
+.panel-benefit-alt{
+        .panel-title-bar{
+            font-weight: bold;
+            text-align: right;
+        }
+            .panel-title{
+        text-align: left;
+    }
+    .panel-variant(@panel-benefit-border; @panel-benefit-text; @panel-benefit-alt-bg; @panel-benefit-border);
+        a {
+            color: @panel-benefit-text;
+        }
+}

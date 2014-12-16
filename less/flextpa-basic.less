@@ -373,11 +373,11 @@ hr.separator{
     .panel-variant(@panel-class-border; @panel-class-text; @panel-class-alt-bg; @panel-class-border);
 }
 
-@panel-benefit-text:                darken(@panel-plan-text, 15%);
-@panel-benefit-bg:                  darken(@panel-plan-bg, 15%);
+@panel-benefit-text:                @panel-plan-text;
+@panel-benefit-bg:                  @panel-plan-bg;
 @panel-benefit-border:              darken(spin(@panel-benefit-bg, -10), 7%);
 
-@panel-benefit-alt-bg:                  darken(@panel-benefit-bg, 10%);
+@panel-benefit-alt-bg:           #FFF; //darken(@panel-benefit-bg, 10%);
 
 .panel-benefit{
     .panel-variant(@panel-benefit-border; @panel-benefit-text; @panel-benefit-bg; @panel-benefit-border);

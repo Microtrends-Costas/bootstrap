@@ -349,6 +349,7 @@ hr.separator{
 @panel-class-border:              #ddd;
 
 @panel-class-alt-bg:              darken(@panel-class-bg, 10%);
+@panel-class-disabled-bg:         darken(@panel-class-alt-bg, 20%);
 
 .panel-class{
     .panel-title-bar{
@@ -375,6 +376,24 @@ hr.separator{
     }
     .panel-variant(@panel-class-border; @panel-class-text; @panel-class-alt-bg; @panel-class-border);
 }
+
+.panel-class-disabled{
+    .panel-title-bar{
+        font-weight: bold;
+        text-align: right;
+    }
+    .panel-title{
+        text-align: left;
+        font-weight: bold;
+    }
+    a {
+        color: @panel-class-text;  
+        font-weight: bold;
+    }
+    .panel-variant(@panel-class-border; @panel-class-text; @panel-class-disabled-bg; @panel-class-border);
+}
+
+
 
 @panel-benefit-text:                @panel-plan-text;
 @panel-benefit-bg:                  @panel-plan-bg;

@@ -1,6 +1,6 @@
 -
   browser: >
-    Internet Explorer 11
+    Internet Explorer 11 & Microsoft Edge
   summary: >
     Hovered element still remains in `:hover` state after scrolling away.
   upstream_bug: >
@@ -10,7 +10,7 @@
 
 -
   browser: >
-    Internet Explorer 11
+    Internet Explorer 11 & Microsoft Edge
   summary: >
     When hovering over a `<select>` menu item, the cursor for the element underneath the menu is displayed.
   upstream_bug: >
@@ -107,16 +107,6 @@
     Chromium#475128
   origin: >
     Bootstrap#16180
-
--
-  browser: >
-    Chrome
-  summary: >
-    `display: table;` within `display: block;` forces sibling content to new line.
-  upstream_bug: >
-    Chromium#309483
-  origin: >
-    Bootstrap#9950
 
 -
   browser: >
@@ -236,7 +226,7 @@
   summary: >
     Focus ring of image map within a modal is displayed in the wrong location.
   upstream_bug: >
-    WebKit#143527
+    WebKit#143527, Safari#21908735
   origin: >
     Bootstrap#16180
 

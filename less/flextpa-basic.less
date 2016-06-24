@@ -301,6 +301,20 @@ hr.separator{
     vertical-align: super;
 }
 
+.EditPencil{
+    font: normal normal normal @fa-font-size-base/@fa-line-height-base FontAwesome; // shortening font declaration
+    font-size: 22px;
+    display: inline-block;
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: darken(@brand-success, 15%);
+    margin-top: -7px;
+}
+.EditPencil:before{
+    content: @fa-var-pencil;
+}
+
 .nav-debug {
     #gradient > .striped(lighten(@brand-warning, 28%));
      background-size: 40px 40px;

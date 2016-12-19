@@ -118,6 +118,7 @@ overflow: auto;
         @media all and  (min-width: 1624px) {
             width: 1395px;
     }
+    
 }
 
 #untabbed-content{
@@ -196,43 +197,32 @@ background-color: @navbar-default-bg;
 color: rgba(0, 0, 0, 0.8);
 }
 
-#HeaderTitle{
-    @media all and (max-width: 1023px){
-        width: 158px;
-    }
-    
-    @media all and (min-width: 1024px) and (max-width: 1323px) {
-            width: 414px;
-    }
-    @media all and (min-width: 1324px) and (max-width: 1623px) {
-            width: 614px;
-    }
-        @media all and  (min-width: 1624px) {
-            width: 914px;
-    }
-    text-align:center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 #HeaderUser{
-       @media all and (max-width: 1323px) {
-            width: 100px;
+        @media all and (max-width: 1023px){
+        width: 410px;
     }
-    @media all and (min-width: 1324px) {
-            width: 200px;
+       @media all and (min-width: 1024px) and (max-width: 1323px) {
+            width: 510px;
+    }
+     @media all and (min-width: 1324px) and (max-width: 1623px) {
+            width: 710px;
+    }
+    @media all and (min-width: 1624px) {
+            width: 1110px;
     }
     #HeaderLIA{
                @media all and (max-width: 1323px) {
             display: none;
     }
     }
-    text-align:center;
+    text-align:left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #HeaderLogout{
-    width:250px; text-align:right; margin-right: -40px;
+    width:275px; text-align:right; margin-right: 0px;
     }
     
 hr.separator{
@@ -271,6 +261,14 @@ hr.separator{
 .PadTop{
     padding-top: 10px;
 }
+
+.MediumPadTop{
+    
+    @media all and  (max-width: 1323px) {
+            padding-top: 40px;
+    }
+}
+
 .ClearPad{
     margin-bottom: -10px;
     padding-bottom: -10px;

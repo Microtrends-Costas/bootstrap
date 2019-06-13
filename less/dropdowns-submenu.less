@@ -43,7 +43,11 @@
     border-right: 4px solid transparent;
   }
   .dropdown-submenu .dropdown-menu {
-    position: static;
+  	
+  	@media all and (min-width: 1024px)
+  	{
+  		    position: static;
+  	}
     margin-top: 0;
     border: 0;
     box-shadow: none;

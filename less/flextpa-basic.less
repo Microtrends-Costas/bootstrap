@@ -18,6 +18,7 @@ body{
 
 #container{
 
+/*
     @media all and (max-width: 1323px) {
             width: 1024px;
     }
@@ -27,6 +28,8 @@ body{
         @media all and  (min-width: 1624px) {
             width: 1624px;
     }
+    */
+    width: 100%;
     height: 100%;
     position: fixed;
     display: block;
@@ -40,7 +43,13 @@ body{
     margin-top: 0;
 }
 #content {
-    @media all and (max-width: 1023px){
+	
+	/*
+	@media all and (max-width: 767px){
+		width: 100%;
+	}
+	
+    @media all and (min-width: 768px) and (max-width: 1023px){
         width: 768px;
     }
     
@@ -53,20 +62,25 @@ body{
         @media all and  (min-width: 1624px) {
             width: 1624px;
     }
-height: 100%;
+    */
+    
+	width: 100%;
+	height: 100%;
 }
 #sidenav {
-position: absolute;
-top: 50px;
-left: 0;
-bottom: 20px;
-width: 160px;
-margin: 0;
-padding-top: 3px;
-border-top: 0px;
-border-bottom: 0px;
-font-weight: bold;
-
+	@media all and (min-width: 1024px){
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 160px;	
+	}	
+	
+	bottom: 20px;
+	margin: 0;
+	padding-top: 3px;
+	border-top: 0px;
+	border-bottom: 0px;
+	font-weight: bold;
 }
 #nav_brand{
     background-image: url("../images/nav_logo.png");
@@ -77,25 +91,28 @@ font-weight: bold;
     height: 30px;
 }
 #inner-content {
-position: absolute;
-left: 165px;
-top: 65px;
-bottom: 15px;
-
-overflow: auto;
-    @media all and (max-width: 1023px){
-        width: 600px;
-    }
-    
-    @media all and (min-width: 1024px) and (max-width: 1323px) {
-            width: 855px;
-    }
-    @media all and (min-width: 1324px) and (max-width: 1623px) {
-            width: 1155px;
-    }
-        @media all and  (min-width: 1624px) {
-            width: 1455px;
-    }
+	position: absolute;
+	top: 65px;
+	bottom: 15px;
+	overflow: auto;
+	
+	@media all and (max-width: 1023px)
+	{
+		width: 100%;
+	}
+	@media all and (min-width: 1024px)
+	{
+		left: 165px;
+	}
+	@media all and (min-width: 1024px) and (max-width: 1323px) {
+		width: 855px;
+	}
+	@media all and (min-width: 1324px) and (max-width: 1623px) {
+		width: 1155px;
+	}
+	@media all and  (min-width: 1624px) {
+		width: 1455px;
+	}
 
 }
 
@@ -176,7 +193,13 @@ margin: 0 auto;
 padding-top: 3px;
 left: 0;
 right: 0;
-    @media all and (max-width: 1023px){
+/*
+	@media all and (max-width: 767px)
+	{
+		width: 100%;
+	}
+	
+    @media all and (min-width: 768px) and (max-width: 1023px){
         width: 768px;
     }
     
@@ -188,7 +211,8 @@ right: 0;
     }
         @media all and  (min-width: 1624px) {
             width: 1624px;
-    }
+    } */
+width: 100%;
 height: 20px;
 text-align: center;
 font-size: 10px;
@@ -222,8 +246,11 @@ color: rgba(0, 0, 0, 0.8);
 }
 
 #HeaderLogout{
-    width:275px; text-align:right; margin-right: 0px;
-    }
+   /* width:275px; */
+    text-align:right; 
+    margin-right: 0px;
+    float: right !important;
+}
     
 hr.separator{
     height: 2px;
@@ -260,6 +287,18 @@ hr.separator{
 
 .PadTop{
     padding-top: 10px;
+}
+
+.XSmallPadTop{
+	@media all and (max-width: 767px){
+		padding-top: 10px;
+	}
+}
+
+.SmallPadTop{
+	@media all and (max-width: 1023px){
+		padding-top: 10px;
+	}
 }
 
 .MediumPadTop{
@@ -305,7 +344,7 @@ hr.separator{
 	font-weight: 900;   
     font-size: 16px;
     display: inline-block;
-    text-rendering: auto; // optimizelegibility throws things off #1094
+    text-rendering: auto; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: darken(@brand-success, 15%);
@@ -450,4 +489,38 @@ hr.separator{
     th{
         text-align: center;
     }
+}
+
+.container-flex{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+
+@media (max-width: 1023px) {
+  .sidenav-collapse {
+    position: fixed;
+    top: 50px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100% !important;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	z-index: 1000;
+  }
+  .sidenav-collapse.open {
+    visibility: visible;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    
+    
+  }
 }
